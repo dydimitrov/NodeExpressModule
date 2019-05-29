@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0024e5b-17cd-4f03-b088-8d884e05e639" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/views/category/add.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/home/index.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/layout.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/products/add.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/express.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/express.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/static-files.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/category/add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/products/add.html" beforeDir="false" />
-    </list>
+    <list default="true" id="b0024e5b-17cd-4f03-b088-8d884e05e639" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -81,7 +66,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -173,12 +158,12 @@
       <workItem from="1557300647761" duration="8989000" />
       <workItem from="1558336143515" duration="63000" />
       <workItem from="1558336229109" duration="6537000" />
-      <workItem from="1559112980761" duration="4655000" />
+      <workItem from="1559112980761" duration="5285000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46353000" />
+    <option name="totallyTimeSpent" value="46983000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -199,7 +184,7 @@
       <window_info id="Gulp" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25204584" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25204584" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.40425533" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
