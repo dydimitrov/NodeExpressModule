@@ -14,7 +14,7 @@ module.exports.addPost = (req, res) => {
 module.exports.productByCategory = (req, res) =>{
   let categoryName = req.params.category;
 
-  Category.find({name: categoryName})
+  Category.findOne({name: categoryName})
       .populate('products')
       .then((category)=>{
           if (!category){
