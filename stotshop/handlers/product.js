@@ -117,9 +117,6 @@ module.exports.deletePost = (req, res) => {
             return;
         }
 
-        product.name = editedProduct.name;
-        product.description = editedProduct.description;
-        product.price = editedProduct.price;
 
         Product.deleteOne({_id: id}, (err) => {
             if (!err) {
@@ -131,6 +128,24 @@ module.exports.deletePost = (req, res) => {
                     `/?error=${encodeURIComponent('error=Somethink goes wrong!')}`);
                 return;
             }
+        });
+    });
+};
+
+module.exports.buyGet = (req, res) => {
+    let id = req.params.id;
+
+    Product.findById(id).then(product => {
+        if (!product) {
+            res.sendStatus(404);
+            return;
+        }
+
+        Category.find().then((categories) => {
+            res.render('products/buy', {
+                product: product,
+                categories: categories
+            });
         });
     });
 };
