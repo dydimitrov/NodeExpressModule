@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 let categorySchema = mongoose.Schema({
     name: {type: mongoose.SchemaTypes.String, required: true},
+    creator:{type: mongoose.SchemaTypes.ObjectId, ref: 'User', required: true},
     products:[{type: mongoose.SchemaTypes.ObjectId, ref:'Product'}]
 });
 
