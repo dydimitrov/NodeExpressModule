@@ -1,4 +1,5 @@
 const fs = require('fs');
+const Cube = require('../../models/Cube');
 
 function getCreate (req, res){
     res.render('products/create');
@@ -6,19 +7,19 @@ function getCreate (req, res){
 
 function getDetails (req, res){
     var id = req.params.id;
-    var db = JSON.parse(fs.readFileSync('./config/database.json')).filter(c => c.id !== id)[0];
-
-    res.render('products/details', {db});
+    Cube.findById(id).then(cube => {
+        if (!cube) {
+            res.sendStatus(404);
+            return;
+        }
+        res.render('products/details', {cube:cube});
+    });
 }
 
 function postCreate(req,res){
-    var db = JSON.parse(fs.readFileSync('./config/database.json'));
+    let productObj = req.body;
 
-    let cube = req.body;
-    cube.id = db.length+1;
-    db.push(cube);
-
-    fs.writeFileSync('./config/database.json',JSON.stringify(db));
+    Cube.create(productObj).then((product) => {console.log(product)});
     res.redirect('/');
 }
 
