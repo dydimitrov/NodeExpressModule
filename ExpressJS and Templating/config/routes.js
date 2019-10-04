@@ -14,6 +14,7 @@ module.exports = (app) => {
     app.get('/details/:id', controllers.productsController.getDetails);
 
     app.get('/attach/accessory/:id', controllers.accessoryController.getAttach);
+    app.post('/attach/accessory/:id', controllers.accessoryController.postAttach);
 
     app.all('*', controllers.errorController.getError);
 };

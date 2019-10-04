@@ -20,12 +20,25 @@ function getAttach(req,res) {
             res.sendStatus(404);
             return;
         }
-        res.render('accessory/attach', {cube:cube});
+        Accessory.find().then((accessory) =>{
+            accessory = accessory.filter(acc => !acc.cubes.includes(id));
+                res.render('accessory/attach', {cube:cube, accessories: accessory});
+        });
     });
 }
 
 function postAttach(req,res){
-    res.redirect('/');
+    var id = req.params.id;
+
+    Cube.findById(id).then((cube) => {
+        Accessory.findById(req.body.accessory).then(acc => {
+            acc.cubes.push(id);
+            acc.save();
+            cube.accessories.push(acc._id);
+            cube.save();
+        });
+        res.redirect('/')
+    });
 }
 
 module.exports = {

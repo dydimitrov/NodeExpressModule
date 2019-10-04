@@ -6,7 +6,7 @@ let productSchema = mongoose.Schema({
     imageUrl: {type: mongoose.SchemaTypes.String},
     description:{type: mongoose.SchemaTypes.String},
     difficultyLevel:{type: mongoose.SchemaTypes.Number},
-    accessories: {type: mongoose.SchemaTypes.ObjectId, ref: 'Accessory'},
+    accessories: [{type: mongoose.SchemaTypes.ObjectId, ref: 'Accessory', unique:true}],
 });
 
 let Cube = mongoose.model('Cube',productSchema);

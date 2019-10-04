@@ -1,5 +1,6 @@
 const fs = require('fs');
 const Cube = require('../../models/Cube');
+const Accessory = require('../../models/Accessory');
 
 function getCreate (req, res){
     res.render('products/create');
@@ -12,7 +13,11 @@ function getDetails (req, res){
             res.sendStatus(404);
             return;
         }
-        res.render('products/details', {cube:cube});
+        Accessory.find().then(acc =>{
+            acc = acc.filter(acc => acc.cubes.includes(id));
+            res.render('products/details', {cube:cube, accessories: acc});
+
+        });
     });
 }
 
