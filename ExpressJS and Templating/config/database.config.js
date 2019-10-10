@@ -17,4 +17,5 @@ module.exports = (config) => {
     });
     require('../models/Cube');
     require('../models/Accessory');
+    require('../models/User');
 };
